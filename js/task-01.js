@@ -21,5 +21,5 @@ console.log("Number of categories: ", document.querySelectorAll('ul#categories l
 
 document.querySelectorAll('ul#categories li.item').forEach(element => {
     console.log('Category: ', element.querySelector('h2').textContent);
-    console.log('Elements: ', element.querySelectorAll('ul li').length)
+    console.log('Elements: ', element.querySelectorAll('ul>li').length)
 });
