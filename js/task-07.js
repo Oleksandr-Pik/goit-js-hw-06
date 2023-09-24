@@ -6,5 +6,5 @@ const refs = {
 };
 
 refs.fontSizeControl.addEventListener('input', () => {
-  refs.textElement.style.fontSize = refs.fontSizeControl.value + "px";
+    refs.textElement.style.fontSize = refs.fontSizeControl.value + 'px';
 });
