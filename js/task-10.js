@@ -24,13 +24,13 @@ const refs = {
 let amountBoxes = 0;
 
 refs.input.addEventListener('input', onInput);
+refs.createBtn.addEventListener('click', onCreateBtn);
+refs.destroyBtn.addEventListener('click', destroyBoxes);
 
 function onInput(evt) {
     amountBoxes = Number(evt.currentTarget.value);
     return amountBoxes;
 }
-
-refs.createBtn.addEventListener('click', onCreateBtn);
 
 function onCreateBtn() {
     return createBoxes(amountBoxes);
@@ -50,8 +50,6 @@ function createBoxes(amount) {
         }
     }
 }
-
-refs.destroyBtn.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
     boxes.innerHTML = "";
