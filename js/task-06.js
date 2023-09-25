@@ -8,11 +8,11 @@
 const input = document.querySelector('#validation-input');
 
 input.addEventListener('blur', event => {
-    if (!input.value) {
-        return;
-    } else if (event.currentTarget.value.length <= input.dataset.length) {
-        input.classList.add('valid');
+    console.log(event.currentTarget.value.length);
+    console.log(input.dataset.length);
+    if (event.currentTarget.value.length === Number(input.dataset.length)) {
+        input.className = 'valid';
     } else {
-        input.classList.add('invalid');
+        input.className = 'invalid';
     }
 });
